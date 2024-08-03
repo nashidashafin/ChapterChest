@@ -1,0 +1,26 @@
+
+
+
+
+
+
+
+.btn{
+    
+        font-family: "Playfair Display", serif;
+        font-weight: 500;
+    font-style: normal;
+    border-radius: 0;
+    text-transform: uppercase;
+    background-color: #800000;
+    color: aliceblue;
+
+    
+}
+h3{
+    font-family: "Playfair Display", serif;
+        font-weight: 500;
+    font-style: normal;
+    text-transform: uppercase;
+    color: #800000;
+}

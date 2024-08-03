@@ -1,0 +1,29 @@
+h3,h5,h6{
+    font-family: "Playfair Display", serif;
+    font-weight: 500;
+font-style: normal;
+border-radius: 0;
+text-transform: uppercase;
+
+}
+h3{
+    letter-spacing: 1.5px;
+}
+h5{
+    letter-spacing: 1px;
+    font-weight: 700;
+    color: #800000;
+    font-size: 20px;
+}
+h6{
+    text-transform: capitalize;
+}
+.card{
+    box-shadow: rgba(78, 1, 4, 0.667) 0px 2px 5px 0px, rgba(92, 2, 2, 0.703) 0px 1px 1px 0px;
+    border-radius: 10px;
+    border: 0;
+}
+p,h6{
+    text-transform: capitalize;
+
+}

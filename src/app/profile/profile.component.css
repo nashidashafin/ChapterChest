@@ -1,0 +1,13 @@
+h3{
+    font-family: "Playfair Display", serif;
+        font-weight: 500;
+    font-style: normal;
+    text-transform: uppercase;
+    color: #800000;
+}
+h4{
+    font-family: "Playfair Display", serif;
+        font-weight: 300;
+    font-style: normal;
+    text-transform: capitalize;
+}

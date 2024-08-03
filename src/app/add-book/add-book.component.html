@@ -1,0 +1,58 @@
+<nav class="navbar navbar-expand-lg " >
+    <div class="container-fluid">
+      <a routerLink="/home" class="navbar-brand ps-5" href="#">
+        <img src="https://i.postimg.cc/pr0tXwLF/images-removebg-preview-1.png" width="40" alt="">
+        <span>ChapterChest</span></a>
+        <a style="text-decoration: none;" class="border rounded-pill d-flex justify-content-between px-2 pt-2 me-5">
+          <i class="fa-solid fa-user pt-1 pe-2" style="color: #ffffff;"></i>
+          <p class="text-white">Admin</p>
+        </a>
+      </div>
+      </nav> 
+
+      <div class="container w-50 my-5 shadow">
+        <h3 class="text-center py-3">Add Your Collection</h3>
+        <div class="pb-4">
+            <form (ngSubmit)="addLibraryBook()"  [formGroup]="AddBookFormModel">
+              <div class="form-floating my-3">
+                  <input  formControlName="title" name="title" type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+                  <label for="floatingInput">Title</label>
+                </div>
+                
+                  <div style="text-align: left; font-size: small;" *ngIf="AddBookFormModel.get('title')?.errors&&AddBookFormModel.get('title')?.touched">
+                    <p class="text-danger ms-2">Please add the title</p>
+                   </div>
+                
+                <div class="form-floating mb-3">
+                  <input formControlName="author" name="author" type="text" class="form-control" id="floatingauthor" placeholder="Author">
+                  <label for="floatingPassword">Author</label>
+                </div>
+                <div style="text-align: left; font-size: small;" *ngIf="AddBookFormModel.get('author')?.errors&&AddBookFormModel.get('author')?.touched">
+                  <p class="text-danger ms-2">Please add author</p>
+                 </div>
+                <div class="form-floating mb-3">
+                  <input required formControlName="genere" name="genere" type="text" class="form-control" id="Genere" placeholder="Genere">
+                  <label for="floatingPassword">Genere</label>
+                </div>
+                <div style="text-align: left; font-size: small;" *ngIf="AddBookFormModel.get('genere')?.errors&&AddBookFormModel.get('genere')?.touched">
+                  <p class="text-danger ms-2">Please add genere</p>
+                 </div>
+                <div class="form-floating mb-3">
+                  <input required formControlName="image" name="image" type="text" class="form-control" id="imageurl" placeholder="imageurl">
+                  <label for="floatingPassword">Image Url</label>
+                </div>
+                <div style="text-align: left; font-size: small;" *ngIf="AddBookFormModel.get('image')?.errors&&AddBookFormModel.get('image')?.touched">
+                  <p class="text-danger ms-2">Please add a image url</p>
+                 </div>
+                <div class="form-floating mb-3">
+                  <input required formControlName="description" name="description" type="text" class="form-control" id="imageurl" placeholder="imageurl">
+                  <label for="floatingPassword">Descrpition</label>
+                </div>
+                <div style="text-align: left; font-size: small;" *ngIf="AddBookFormModel.get('description')?.errors&&AddBookFormModel.get('description')?.touched">
+                  <p class="text-danger ms-2">Please add a description</p>
+                 </div>
+                <div class="text-center "><button type="submit" class="btn px-5 py-2">Add</button></div>
+                
+            </form>
+        </div>
+      </div>

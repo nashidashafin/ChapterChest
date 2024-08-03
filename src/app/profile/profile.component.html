@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-lg " >
+    <div class="container-fluid">
+      <a class="navbar-brand ps-5" href="#">
+        <img src="https://i.postimg.cc/pr0tXwLF/images-removebg-preview-1.png" width="40" alt="">
+        <span>ChapterChest</span></a>
+        <a ><button (click)="logout()" class="btn btn-outline-light me-5" >Logout</button></a>
+
+      </div>
+      </nav> 
+<div>
+    <div *ngIf="!editView" class="shadow container text-center w-50 my-5">
+        <h3 class="text-center py-3">My Profile</h3>
+        <div class="text-center py-4"><img style="border-radius: 50%;" [src]="profilePic" width="25%" alt=""></div>
+        <h4>{{adminUsername}}</h4>
+        <p class="text-center" style="font-weight: 300;">Email : {{adminEmail}}</p>
+        <p style="font-weight: 300;">Password: {{adminPassword}}</p>
+        <button (click)="update()" class="btn mb-5">Update</button>
+
+    </div>
+
+    <div *ngIf="editView" class="shadow container text-center w-50 my-5">
+        <h3 class="text-center py-3">Update Profile</h3>
+        <div  class="text-center py-4">
+            <label  for="im" class="custom-file-input">
+                <input (change)="getFile($event)" type="file" id="im" class="d-none" >
+                <img style="border-radius: 50%; " [src]="profilePic" width="65%" alt=""></label>
+        </div>
+        
+        <form class="container w-50">
+            <input [(ngModel)]="adminData.email" type="text" class="form-control py-3 mb-2" placeholder="email" name="email" id="">
+            <input [(ngModel)]="adminData.password" type="text" class="form-control py-3 mb-2" placeholder="Password" name="psw" id="">
+        </form>
+        <div class="d-flex container w-50 pt-3 justify-content-around">
+            <button (click)="save()" class="btn mb-5 px-4">Save</button>
+            <button (click)="cancel()" class="btn mb-5 px-4">Cancel</button>
+        
+        </div>
+
+    </div>
+</div>

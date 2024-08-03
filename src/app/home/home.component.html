@@ -1,0 +1,57 @@
+<nav class="navbar navbar-expand-lg " >
+  <div class="container-fluid">
+    <a class="navbar-brand ps-5" href="#">
+      <img src="https://i.postimg.cc/pr0tXwLF/images-removebg-preview-1.png" width="40" alt="">
+      <span>ChapterChest</span></a>
+      <a routerLink="/profile" style="text-decoration: none;" class="border rounded-pill d-flex justify-content-between px-2 pt-2 me-5">
+        <i class="fa-solid fa-user pt-1 pe-2" style="color: #ffffff;"></i>
+        <p class="text-white">{{adminUsername}}</p>
+      </a>
+    </div>
+    </nav> 
+
+
+
+<div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+               <img src="https://i.postimg.cc/yx6W6PPy/vector-illustration-character-reading-book-1228145-1269-removebg-preview.png" width="100%" alt="">
+            </div>
+            <div class="col-lg-6 my-5">
+               <p class="text-start "><b>"Today a reader, tomorrow a leader." – <i style="color: #800000; font-size: larger;">Margaret Fuller</i></b></p><br>
+               <p class="text-end ps-5 ms-5"><b>"A word after a word after a word is power." – <i style="color: #800000; font-size: larger;">Margaret Atwood</i></b></p><br>
+
+               
+               <p class="text-start"><b>"One glance at a book and you hear the voice of another person, perhaps someone dead for 1,000 years. To read is to voyage through time." – <i style="color: #800000; font-size: larger;">Carl Sagan</i></b></p><br>
+               <p class="text-end ps-5 ms-5"><b>"Show me a family of readers, and I will show you the people who move the world." – <i style="color: #800000; font-size: larger;">Napoleon Bonaparte</i></b></p>
+            </div>
+            
+
+        </div>
+    </div>
+    <div class="container my-5">
+      <h3 class="text-center">Choose your Favourites here</h3>
+
+      <div class="d-flex justify-content-between my-3">
+        <div class="text-start container w-50"><input [(ngModel)]="searchData" type="text" name="" id="" placeholder="search" class="form-control pe-5 py-2"></div>
+
+        <div><button routerLink="/addBook" class="btn">Add New</button></div>
+      </div>
+
+      <div class="row">
+        <div *ngFor="let i of allBooks | search : searchData " class="col-lg-3 col-md-4 col-sm-6">
+          <a style="text-decoration: none;" routerLink="/singleView/{{i.id}}">
+            <div class="card" style="width: 16rem; height: 25rem;">
+              <img height="250px" [src]="i.image" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title text-center">{{i.title}}</h5>
+                <p class="card-text text-secondary text-center">{{i.genere}}</p>
+                <h6 class="card-text text-center" style="text-transform: capitalize;">{{i.author}}</h6>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+</div>

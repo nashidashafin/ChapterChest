@@ -1,1 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'ngx-toastr/toastr';
+body{
+    margin: 0;
+    padding: 0;
+}
+
+span{
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style:oblique;  
+  color: aliceblue;
+  letter-spacing: 1.5px;
+}
+
+p{
+  font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+}
+
+.navbar{
+  background-color: #800000;
+  
+}
+
+.btn{
+    
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+font-style: normal;
+border-radius: 0;
+text-transform: uppercase;
+background-color: #800000;
+color: aliceblue;
+
+
+}

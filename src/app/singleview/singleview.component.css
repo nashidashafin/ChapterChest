@@ -1,0 +1,10 @@
+h3{
+    font-family: "Playfair Display", serif;
+        font-weight: 500;
+    font-style: normal;
+    text-transform: uppercase;
+    color: #800000;
+}
+p{
+    text-transform: capitalize;
+}

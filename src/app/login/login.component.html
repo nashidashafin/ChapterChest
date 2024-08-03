@@ -1,0 +1,42 @@
+<nav class="navbar navbar-expand-lg " >
+  <div class="container-fluid">
+    <a class="navbar-brand ps-5" href="#">
+      <img src="https://i.postimg.cc/pr0tXwLF/images-removebg-preview-1.png" width="40" alt="">
+      <span>ChapterChest</span></a>
+    </div>
+    </nav>  
+
+
+
+<div>
+    <div class="container w-75 my-5">
+     <div class="row" style="background-color: #e5edff;">
+        <h3 class="text-center my-2">Login Here</h3>
+        <div class="col-lg-6 col-md-6 my-5">
+            <form [formGroup]="loginFormModel">
+                
+                  <div class="form-floating mb-2">
+                    <input type="email" formControlName="email" name="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                    <label for="floatingInput">Email address</label>
+                  </div>
+                  <div style="text-align: left; font-size: small;" *ngIf="loginFormModel.get('email')?.errors&&loginFormModel.get('email')?.touched">
+                    <p class="text-danger ms-2">Please enter a valid email</p>
+                   </div>
+                  <div class="form-floating mb-2">
+                    <input type="password" formControlName="psw" name="psw" class="form-control" id="floatingPassword" placeholder="Password">
+                    <label for="floatingPassword">Password</label>
+                  </div>
+                  <div  style="text-align: left; font-size: small;" *ngIf="loginFormModel.get('psw')?.errors&&loginFormModel.get('psw')?.touched">
+                    <p class="text-danger ms-2">Includes letters and numbers</p>
+                   </div>
+                  <div class="text-center"><button (click)="login()" class="btn">Login</button></div>
+            </form>
+        </div>
+        <div class="col-lg-6 col-md-6 pe-0 py-5">
+            <img src="https://i.postimg.cc/pr94ZxxK/books-arrangement-with-copy-space-23-2150264106-removebg-preview.png" width="100%" alt="">
+
+        </div>
+
+     </div>
+    </div>
+</div>

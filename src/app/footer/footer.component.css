@@ -1,0 +1,18 @@
+.foot{
+    background-color: #800000;
+}
+h5{
+    color: aliceblue;
+}
+form{
+    .btn{
+        
+            font-family: "Playfair Display", serif;
+            font-weight: 500;
+        font-style: normal;
+        border-radius: 0;
+        text-transform: uppercase;
+    
+        
+    }
+}
